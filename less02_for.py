@@ -18,8 +18,8 @@ for element in School:
     if Cur_class_students == 0:
         Average_class == 0
     else:    
-        Average_class = Cur_class_score / Cur_class_students
-    print ('Средняя оценка по классу ', element['Grade'],': ', Average_class)
+        Average_class = round (Cur_class_score / Cur_class_students, 1)
+    print ('Средняя оценка по классу {}: {}.'.format (element['Grade'], Average_class))
 
-Average = (School_score) / Student_sum
+Average = round (School_score / Student_sum, 1)
 print ('Средняя оценка по школе:', Average)
