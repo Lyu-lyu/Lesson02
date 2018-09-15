@@ -7,7 +7,11 @@ Voc_Ella = {'как дела?': 'хорошо!', 'что делаешь?': 'ид
 def ask_user ():
     while True:
         user_say = (input ('О чем вы хотите спросить? ')).lower ()
-        reply = Voc_Ella.get (user_say)
+        if user_say == 'хорошо':
+            break
+        else:
+            reply = Voc_Ella.get (user_say)
         if reply != None:
             print (reply)    
+           
 ask_user ()
